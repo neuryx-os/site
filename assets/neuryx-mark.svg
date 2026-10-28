@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Neuryx">
-  <g stroke="#5B47F0" stroke-width="11" stroke-linecap="round" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#8B7BFF" stroke-width="11" stroke-linecap="round" fill="none">
     <line x1="32" y1="88" x2="32" y2="32"/>
     <line x1="32" y1="32" x2="88" y2="88"/>
     <line x1="88" y1="88" x2="88" y2="40"/>
   </g>
-  <g fill="#F6F7FB" stroke="#5B47F0" stroke-width="6">
+  <g fill="#0B0F1A" stroke="#8B7BFF" stroke-width="6">
     <circle cx="32" cy="88" r="10"/>
     <circle cx="32" cy="32" r="10"/>
     <circle cx="88" cy="88" r="10"/>
   </g>
-  <path d="M88 12 L93 27 L108 32 L93 37 L88 52 L83 37 L68 32 L83 27 Z" fill="#0EA5C6"/>
+  <path d="M88 12 L93 27 L108 32 L93 37 L88 52 L83 37 L68 32 L83 27 Z" fill="#38D6F5"/>
 </svg>
