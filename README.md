@@ -2,48 +2,76 @@
 
 Site oficial do Neuryx.
 
-**Status:** Planejado
+**Status:** Em desenvolvimento
 
-## Propósito
+## Stack
 
-Site estático do Neuryx. Por enquanto contém apenas uma página "em breve" com o
-logo, a frase de apresentação e links para o GitHub e para o Lyra OS.
+- **HTML, CSS e JavaScript puros**, sem framework, sem bundler e sem etapa de
+  build — o mesmo stack do site do Lyra OS. Qualquer hospedagem estática serve,
+  com o site servido a partir da raiz.
+- **Nenhum JavaScript na v1.** Todas as interações são links e âncoras. Se
+  surgir necessidade real, o script fica em `js/main.js`.
+- **Fontes auto-hospedadas** em `assets/fonts/` (woff2, subconjunto `latin`).
+  Nenhuma requisição a Google Fonts, CDNs ou outros terceiros.
 
-Segue o mesmo stack do site do Lyra OS: **HTML, CSS e JavaScript puros**, sem
-framework e sem etapa de build.
+Sem analytics, cookies, rastreadores ou embeds de terceiros.
 
-## Estrutura
+## Visualizar localmente
 
-```
-site/
-├── index.html            # página "em breve"
-├── assets/
-│   └── neuryx-mark.svg   # cópia do símbolo do repositório brand
-└── css/
-    └── style.css         # paleta do brand; tema claro e escuro via prefers-color-scheme
-```
-
-## Desenvolvimento
-
-Abra `index.html` no navegador ou sirva o diretório localmente:
+Na raiz do repositório:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-## Acessibilidade
+Depois abra <http://localhost:8000>. O tema escuro é o padrão; o tema claro é
+aplicado quando o sistema está configurado com preferência clara.
 
-- `lang="pt-BR"` e texto alternativo no logo.
-- Contraste mínimo de 4.5:1 para texto nos dois temas.
-- Foco visível nos links.
+## Estrutura
+
+```
+site/
+├── index.html                # página inicial
+├── 404.html                  # página não encontrada
+├── robots.txt
+├── sitemap.xml
+├── css/
+│   └── style.css             # tokens, tipografia e layout (escuro e claro)
+└── assets/
+    ├── neuryx-mark.svg       # símbolo para fundo escuro
+    ├── favicon.svg
+    ├── favicon-32.png
+    ├── apple-touch-icon.png  # 180×180
+    ├── og-image.png          # 1200×630, Open Graph
+    └── fonts/
+        ├── space-grotesk-latin-500.woff2
+        ├── space-grotesk-latin-600.woff2
+        ├── inter-latin-400.woff2
+        ├── inter-latin-500.woff2
+        ├── inter-latin-600.woff2
+        ├── jetbrains-mono-latin-400.woff2
+        └── OFL.txt           # licenças SIL OFL 1.1
+```
+
+As fontes vêm dos pacotes do Fontsource 5.3.0 (`@fontsource/space-grotesk`,
+`@fontsource/inter`, `@fontsource/jetbrains-mono`).
+
+## Pendências
+
+- **Domínio:** definir o domínio e substituir o marcador `[DOMINIO]` em
+  `index.html` (canonical e Open Graph), `robots.txt` e `sitemap.xml`.
+- **Hospedagem:** escolher onde o site será publicado.
+- **Validação W3C:** rodar o validador HTML (`vnu`) em `index.html` e
+  `404.html`.
 
 ## Relação com outros repositórios
 
-- [`brand`](https://github.com/neuryx-os/brand): fonte do logo e da paleta. Ao
-  atualizar o logo no `brand`, atualize a cópia em `assets/`.
+- [`brand`](https://github.com/neuryx-os/brand): fonte do símbolo e da paleta.
+  Ao atualizar o logo no `brand`, atualize `assets/`.
 - [`lyra-os-linux/site`](https://github.com/lyra-os-linux/site): site do Lyra OS, mesmo stack.
 
 ## Licença
 
-O código do site está sob [GPL-3.0](LICENSE). O logo em `assets/` é marca do
-projeto Neuryx e segue a [política de marca](https://github.com/neuryx-os/brand/blob/main/TRADEMARK.md).
+- Código do site: [GPL-3.0](LICENSE).
+- Fontes: SIL Open Font License 1.1 ([`assets/fonts/OFL.txt`](assets/fonts/OFL.txt)).
+- Nome e logo do Neuryx: sujeitos à [política de marca](https://github.com/neuryx-os/brand/blob/main/TRADEMARK.md) do repositório `brand`.
