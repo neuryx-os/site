@@ -4,6 +4,8 @@ Site oficial do Neuryx.
 
 **Status:** Em desenvolvimento
 
+**Domínio:** `neuryx-os.com.br` (ainda não publicado)
+
 ## Stack
 
 - **HTML, CSS e JavaScript puros**, sem framework, sem bundler e sem etapa de
@@ -58,9 +60,8 @@ As fontes vêm dos pacotes do Fontsource 5.3.0 (`@fontsource/space-grotesk`,
 
 ## Pendências
 
-- **Domínio:** definir o domínio e substituir o marcador `[DOMINIO]` em
-  `index.html` (canonical e Open Graph), `robots.txt` e `sitemap.xml`.
-- **Hospedagem:** escolher onde o site será publicado.
+- **Hospedagem:** escolher onde o site será publicado e apontar o domínio
+  `neuryx-os.com.br` para ela.
 - **Validação W3C:** rodar o validador HTML (`vnu`) em `index.html` e
   `404.html`.
 
